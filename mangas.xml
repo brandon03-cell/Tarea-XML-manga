@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<coleccion>
-    <manga id="1">
-        <titulo>One Piece</titulo>
-        <autor>Eiichiro Oda</autor>
-        <genero>Shonen</genero>
-        <volumenes>107</volumenes>
-        <estado>En publicacion</estado>
-    </manga>
-    
-    <manga id="2">
-        <titulo>Dragon Ball</titulo>
-        <autor>Akira Toriyama</autor>
-        <genero>Shonen</genero>
-        <volumenes>42</volumenes>
-        <estado>Finalizado</estado>
-    </manga>
-</coleccion>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mng:coleccion xmlns:mng="http://www.ejemplo.com/manga">
+    <mng:manga>
+        <mng:titulo>One Piece</mng:titulo>
+        <mng:autor>Eiichiro Oda</mng:autor>
+        <mng:genero>Shonen / Aventuras</mng:genero>
+        <mng:precio moneda="EUR">7.95</mng:precio>
+        <mng:estado>En publicación</mng:estado>
+    </mng:manga>
+
+    <mng:manga>
+        <mng:titulo>Dragon Ball</mng:titulo>
+        <mng:autor>Akira Toriyama</mng:autor>
+        <mng:genero>Shonen / Artes Marciales</mng:genero>
+        <mng:precio moneda="EUR">8.00</mng:precio>
+        <mng:estado>Finalizado</mng:estado>
+    </mng:manga>
+</mng:coleccion>
