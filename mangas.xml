@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coleccion>
+    <manga id="1">
+        <titulo>One Piece</titulo>
+        <autor>Eiichiro Oda</autor>
+        <genero>Shonen</genero>
+        <volumenes>107</volumenes>
+        <estado>En publicacion</estado>
+    </manga>
+    
+    <manga id="2">
+        <titulo>Dragon Ball</titulo>
+        <autor>Akira Toriyama</autor>
+        <genero>Shonen</genero>
+        <volumenes>42</volumenes>
+        <estado>Finalizado</estado>
+    </manga>
+</coleccion>
