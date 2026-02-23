@@ -1,5 +1,5 @@
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
@@ -11,19 +11,21 @@
 }
 
 body {
-    background-color: #050505;
     color: #fff;
     overflow-x: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                url('https://res.cloudinary.com/do4k9fww6/image/upload/v1771884924/Captura_de_pantalla_2026-02-23_231451_fqxm74.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
-    background: rgba(20, 20, 20, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 15px 8%;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(15px);
+    padding: 20px 8%;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgba(255, 60, 0, 0.2);
 }
 
 nav {
@@ -33,9 +35,10 @@ nav {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 800;
     text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .logo span {
@@ -48,97 +51,133 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 30px;
+    margin-left: 35px;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.9rem;
     transition: 0.3s;
+    opacity: 0.7;
 }
 
 .nav-links a:hover {
     color: #ff3c00;
+    opacity: 1;
 }
 
 .hero-section {
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 120px 18%;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.6), #050505), url('https://images.unsplash.com/photo-1614583225154-5feaba1bd5dd?q=80&w=2000&auto=format&fit=crop');
-    background-size: cover;
     animation: fadeIn 1s ease-out;
 }
 
 .hero-section h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-    letter-spacing: -1px;
+    font-size: 4rem;
+    margin-bottom: 25px;
+    text-shadow: 0 10px 30px rgba(0,0,0,1);
+    letter-spacing: -2px;
+}
+
+.hero-section p {
+    font-size: 1.15rem;
+    color: #ddd;
+    margin-bottom: 40px;
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+.xml-hero-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    background: transparent;
+    color: #ff3c00;
+    border: 2px solid #ff3c00;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    letter-spacing: 1px;
+}
+
+.xml-hero-btn:hover {
+    background: #ff3c00;
+    color: #fff;
+    box-shadow: 0 0 40px rgba(255, 60, 0, 0.6);
 }
 
 .manga-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    padding: 80px 5%;
+    gap: 60px;
+    padding: 0 5% 120px;
     flex-wrap: wrap;
 }
 
 .manga-card {
-    background: #111;
-    border-radius: 20px;
-    width: 300px;
+    background: rgba(15, 15, 15, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    width: 340px;
     overflow: hidden;
-    border: 1px solid #222;
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     animation: fadeIn 1.2s ease-out;
 }
 
 .manga-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-20px);
     border-color: #ff3c00;
-    box-shadow: 0 20px 40px rgba(255, 60, 0, 0.2);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.9);
 }
 
 .manga-image img {
     width: 100%;
-    height: 400px;
+    height: 460px;
     object-fit: cover;
+    filter: grayscale(20%);
+    transition: 0.5s;
+}
+
+.manga-card:hover .manga-image img {
+    filter: grayscale(0%);
 }
 
 .manga-details {
-    padding: 25px;
+    padding: 35px;
 }
 
 .manga-details h3 {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
+    font-size: 1.9rem;
+    margin-bottom: 12px;
 }
 
 .author {
-    color: #777;
+    color: #888;
+    margin-bottom: 20px;
     font-size: 0.9rem;
-    margin-bottom: 15px;
 }
 
 .genre-tag {
     background: #ff3c00;
-    padding: 5px 15px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
 }
 
 .summary {
-    color: #aaa;
-    font-size: 0.95rem;
-    margin-bottom: 25px;
+    color: #bbb;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
 .details-btn {
@@ -146,9 +185,10 @@ nav {
     background: #fff;
     color: #000;
     border: none;
-    padding: 12px;
-    border-radius: 12px;
-    font-weight: 700;
+    padding: 18px;
+    border-radius: 4px;
+    font-weight: 900;
+    text-transform: uppercase;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -158,9 +198,70 @@ nav {
     color: #fff;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #0a0a0a;
+    padding: 50px;
+    border-left: 5px solid #ff3c00;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+}
+
+.modal-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.modal-content hr {
+    border: 0;
+    border-top: 1px solid #222;
+    margin-bottom: 30px;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #aaa;
+    font-size: 1.05rem;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    color: #444;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #ff3c00;
+}
+
 footer {
     text-align: center;
-    padding: 60px;
-    border-top: 1px solid #222;
-    color: #444;
+    padding: 100px;
+    background: #000;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.7rem;
 }

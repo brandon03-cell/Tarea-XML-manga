@@ -3,39 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manga Hub</title>
+    <title>Manga Archive | The Ultimate Vault</title>
+    
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/do4k9fww6/image/upload/v1771885762/esfera-del-dragon-de-6-estrella-render-hd-brown-dragon-ball-z-ball-png-clipart_htqpyi.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">Manga<span>Hub</span></div>
+            <div class="logo">Manga<span>Vault</span></div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="mangas.xml" target="_blank">Database XML</a></li>
+                <li><a href="#">History</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section class="hero-section">
-            <h1>Explore the Manga Universe</h1>
-            <p>A professional selection for true manga enthusiasts.</p>
+            <h1>The Golden Era of Manga</h1>
+            <p>Welcome to the definitive archive of Japanese storytelling. This platform preserves the legacy of world-renowned series, utilizing structured data to catalog the evolution of the Shonen genre and its cultural impact across the globe. Explore the historical records of the greatest titles ever created.</p>
+            <a href="mangas.xml" target="_blank" class="xml-hero-btn">Access Raw Database</a>
         </section>
 
         <section class="manga-container">
             <article class="manga-card">
                 <div class="manga-image">
-                    <img src="https://res.cloudinary.com/do4k9fww6/image/upload/v1771883479/ChatGPT_Image_23_feb_2026_22_50_09_bdcd5x.png" alt="One Piece Cover">
+                    <img src="https://res.cloudinary.com/do4k9fww6/image/upload/v1771883853/ChatGPT_Image_23_feb_2026_22_50_09_euzxjg.png" alt="One Piece Cover">
                 </div>
                 <div class="manga-details">
                     <h3>One Piece</h3>
-                    <p class="author">By: Eiichiro Oda</p>
-                    <span class="genre-tag">Adventure</span>
-                    <p class="summary">The journey of Monkey D. Luffy to become the Pirate King.</p>
-                    <button class="details-btn">View Details</button>
+                    <p class="author">Artist: Eiichiro Oda</p>
+                    <span class="genre-tag">Epic Adventure</span>
+                    <p class="summary">The legendary chronicle of the Straw Hat crew and their search for ultimate freedom.</p>
+                    <button class="details-btn" onclick="openModal('modal1')">View Details</button>
                 </div>
             </article>
 
@@ -45,18 +50,55 @@
                 </div>
                 <div class="manga-details">
                     <h3>Dragon Ball</h3>
-                    <p class="author">By: Akira Toriyama</p>
+                    <p class="author">Artist: Akira Toriyama</p>
                     <span class="genre-tag">Martial Arts</span>
-                    <p class="summary">Goku's quest for the legendary Dragon Balls and global peace.</p>
-                    <button class="details-btn">View Details</button>
+                    <p class="summary">The foundation of modern Shonen, following the growth and battles of Son Goku.</p>
+                    <button class="details-btn" onclick="openModal('modal2')">View Details</button>
                 </div>
             </article>
         </section>
     </main>
 
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>One Piece Archive</h2>
+            <hr>
+            <p><strong>Serialization:</strong> Weekly Shonen Jump</p>
+            <p><strong>First Chapter:</strong> 1997</p>
+            <p><strong>Analysis:</strong> Known for its immense complexity and foreshadowing, it stands as a pillar of the industry.</p>
+            <p><strong>Synopsis:</strong> A journey through the Grand Line that explores themes of dreams, political corruption, and true inheritance.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Dragon Ball Archive</h2>
+            <hr>
+            <p><strong>Serialization:</strong> Weekly Shonen Jump</p>
+            <p><strong>First Chapter:</strong> 1984</p>
+            <p><strong>Legacy:</strong> Defined the structure of all battle manga that followed, introducing power scaling.</p>
+            <p><strong>Synopsis:</strong> From the search for the Dragon Balls to the defense of Earth, Goku's journey is a masterclass in action.</p>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Manga Collection Project</p>
+        <p>&copy; 2026 Global Manga Archive - Structured Data Project</p>
     </footer>
 
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target.className === 'modal') {
+                event.target.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
